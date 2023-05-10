@@ -15,7 +15,7 @@ export default function Home() {
           </h1>
           <p className='text-gray-500'>This app provides a detailed guide for creating your biodata.</p>
         </div>
-        <Link href='personal-data/' className='px-8 py-2 text-lg text-white rounded-full bg-rose-500 hover:bg-rose-600'>
+        <Link href='personal-data/' className='px-8 py-4 text-lg text-white rounded-full bg-rose-500 hover:bg-rose-600'>
           Get Started
         </Link>
         <div className='flex ml-52 mt-2 justify-center items-center'>

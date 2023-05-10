@@ -18,7 +18,7 @@ export default function Home() {
         <Link href='personal-data/' className='px-8 py-4 text-lg text-white rounded-full bg-rose-500 hover:bg-rose-600'>
           Get Started
         </Link>
-        <div className='flex ml-52 mt-2 justify-center items-center'>
+        <div className='flex ml-52 mt-4 justify-center items-center'>
           <Image src='/click.png' alt='' width={100} height={100} />
         </div>
         <div className='mt-36'>

@@ -13,7 +13,7 @@ export default function Home() {
             </span>{' '}
             form now!
           </h1>
-          <p className='text-gray-500'>This app provides a detailed guide for creating your biodata.</p>
+          <p className='text-gray-500'>This tool provides a detailed guide for creating your biodata.</p>
         </div>
         <Link href='personal-data/' className='px-8 py-4 text-lg text-white rounded-full bg-rose-500 hover:bg-rose-600'>
           Get Started

@@ -15,7 +15,7 @@ export default function PersonalData() {
   const [date, setDate] = React.useState()
   return (
     <div className='flex h-screen bg-gradient-to-r from-rose-200 to-teal-200'>
-      <div className='m-auto border bg-white p-14 shadow-md rounded-xl'>
+      <div className='m-auto border bg-stone-100 p-14 shadow-md rounded-xl'>
         <h1 className='mb-2 font-bold text-2xl'>Personal Data</h1>
         <hr className='mb-5' />
         <div className='grid w-full max-w-xs items-center gap-1.5 mb-10'>
@@ -52,6 +52,9 @@ export default function PersonalData() {
                 <Calendar mode='single' selected={date} onSelect={setDate} initialFocus />
               </PopoverContent>
             </Popover>
+          </div>
+          <div className='mt-5'>
+            <Button className='bg-blue-200 text-black w-24 hover:bg-blue-300'>Next</Button>
           </div>
         </div>
       </div>

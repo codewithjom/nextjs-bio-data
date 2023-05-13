@@ -38,11 +38,12 @@ export default function PersonalData() {
           </div>
           <div>
             <Label>Date</Label>
+            <br />
             <Popover>
               <PopoverTrigger asChild>
                 <Button
                   variant={'outline'}
-                  className={cn('w-[280px] justify-start text-left font-normal', !date && 'text-muted-foreground')}
+                  className={cn('w-80 justify-start text-left font-normal', !date && 'text-muted-foreground')}
                 >
                   <CalendarIcon className='mr-2 h-4 w-4' />
                   {date ? format(date, 'PPP') : <span>Pick a date</span>}

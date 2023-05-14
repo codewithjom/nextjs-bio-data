@@ -85,7 +85,7 @@ const PersonalData = ({ datas }: Datas) => {
 
   return (
     <div className='flex h-screen bg-gradient-to-r from-rose-200 to-teal-200'>
-      <div className='m-auto border bg-stone-100 p-14 shadow-md rounded-xl'>
+      <div className='m-auto border bg-stone-100 px-32 py-10 shadow-md overflow-y-auto h-[620px]'>
         <h1 className='mb-2 font-bold text-2xl'>Personal Data</h1>
         <hr className='mb-5' />
         <form

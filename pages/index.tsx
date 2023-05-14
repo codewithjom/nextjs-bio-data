@@ -1,9 +1,10 @@
+import type { NextPage } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
-    <div className='flex h-screen'>
+    <div className='flex h-screen bg-gradient-to-r from-rose-100 to-teal-100'>
       <div className='m-auto text-center'>
         <div className='mb-24 space-y-16'>
           <h1 className='text-6xl max-w-xl'>
@@ -31,3 +32,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home

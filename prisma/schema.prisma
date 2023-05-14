@@ -10,24 +10,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model PersonalData {
-  id       Int    @id @default(autoincrement())
-  position String
-  name     String
-  gender   String
-  date     String
+model Personal {
+  id        String    @id @default(uuid())
+  position  String
+  name      String
+  gender    String
+  date      String
+  createdAt DateTime  @default(now())
 }
-
-// model PersonalData {
-//   id        Int      @id @default(autoincrement())
-//   position  String
-//   name      String
-//   gender    Gender
-//   date      DateTime
-// }
-// 
-// enum Gender {
-//   MALE
-//   FEMALE
-//   OTHER
-// }

@@ -19,7 +19,7 @@ model Biodata {
   civilStatus        String
   cityAddress        String
   provincialAddress  String
-  cellphone          Int
+  cellphone          String
   email              String
   dateOfBrith        String
   birthOfPlace       String

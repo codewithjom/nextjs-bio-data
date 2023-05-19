@@ -1,11 +1,11 @@
 'use client'
 
-import { useMultistepForm } from '@/components/useMultistepForm'
+import { useMultistepForm } from '../components/useMultistepForm'
 import { FormEvent, useState } from 'react'
 
-import { PersonalData } from '@/components/PersonalData'
-import { EducationalBackground } from '@/components/EducationalBackground'
-import { EmploymentRecord } from '@/components/EmploymentRecord'
+import { PersonalData } from '../components/PersonalData'
+import { EducationalBackground } from '../components/EducationalBackground'
+import { EmploymentRecord } from '../components/EmploymentRecord'
 
 type FormData = {
   positionDesired: string

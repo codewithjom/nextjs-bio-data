@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Biodata {
+  id                  String @id @default(uuid())
+  positionDesired     String
+  date                String
+  fullname            String
+  gender              String
+  cityAddress         String
+  provincialAddress   String
+  telephone           String
+  cellphone           String
+  email               String
+  dateOfBirth         String
+  birthOfPlace        String
+  civilStatus         String
+  citizenship         String
+  height              String
+  weight              String
+  religion            String
+  spouse              String
+  spouseOccupation    String
+  nameOfChildren1     String
+  nameOfChildren2     String
+  nameOfChildren3     String
+  childBirthDate1     String
+  childBirthDate2     String
+  childBirthDate3     String
+  fatherName          String
+  fatherOccupation    String
+  motherName          String
+  motherOccupation    String
+  language            String
+  emergencyContact    String
+  emergencyAddress    String
+  elementary          String
+  elementaryGraduate  String
+  highschool          String
+  highschoolGraduate  String
+  college             String
+  collegeGraduate     String
+  degree              String
+  specialSkills       String
+  companyName1        String
+  empPosition1        String
+  positionFrom1       String
+  positionTo1         String
+  companyName2        String
+  empPosition2        String
+  positionFrom2       String
+  positionTo2         String
+}

@@ -6,6 +6,59 @@ import { FormEvent, useState } from 'react'
 import { PersonalData } from '../components/PersonalData'
 import { EducationalBackground } from '../components/EducationalBackground'
 import { EmploymentRecord } from '../components/EmploymentRecord'
+import { useRouter } from 'next/router'
+
+type Datas = {
+  datas: {
+    positionDesired: string
+    date: string
+    fullname: string
+    gender: string
+    cityAddress: string
+    provincialAddress: string
+    telephone: string
+    cellphone: string
+    email: string
+    dateOfBirth: string
+    birthOfPlace: string
+    civilStatus: string
+    citizenship: string
+    height: string
+    weight: string
+    religion: string
+    spouse: string
+    spouseOccupation: string
+    nameOfChildren1: string
+    nameOfChildren2: string
+    nameOfChildren3: string
+    childBirthDate1: string
+    childBirthDate2: string
+    childBirthDate3: string
+    fatherName: string
+    fatherOccupation: string
+    motherName: string
+    motherOccupation: string
+    language: string
+    emergencyContact: string
+    emergencyAddress: string
+    elementary: string
+    elementaryGraduate: string
+    highschool: string
+    highschoolGraduate: string
+    college: string
+    collegeGraduate: string
+    degree: string
+    specialSkills: string
+    companyName1: string
+    empPosition1: string
+    positionFrom1: string
+    positionTo1: string
+    companyName2: string
+    empPosition2: string
+    positionFrom2: string
+    positionTo2: string
+  }[]
+}
 
 type FormData = {
   positionDesired: string
@@ -122,10 +175,74 @@ export default function Home() {
     <EmploymentRecord {...data} updateFields={updateFields} />
   ])
 
-  function onSubmit(e: FormEvent) {
+  const router = useRouter()
+
+  const refreshData = () => {
+    router.replace(router.asPath)
+  }
+
+  async function onSubmit(e: FormEvent) {
     e.preventDefault()
     if (!isLastStep) return next()
-    alert('Successful Account Creation')
+    // alert('Successful Account Creation')
+    fetch(`http://localhost:3000/api/create`, {
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'POST'
+    }).then(() => {
+      updateFields({
+        positionDesired: '',
+        date: '',
+        fullname: '',
+        gender: '',
+        cityAddress: '',
+        provincialAddress: '',
+        telephone: '',
+        cellphone: '',
+        email: '',
+        dateOfBirth: '',
+        birthOfPlace: '',
+        civilStatus: '',
+        citizenship: '',
+        height: '',
+        weight: '',
+        religion: '',
+        spouse: '',
+        spouseOccupation: '',
+        nameOfChildren1: '',
+        nameOfChildren2: '',
+        nameOfChildren3: '',
+        childBirthDate1: '',
+        childBirthDate2: '',
+        childBirthDate3: '',
+        fatherName: '',
+        fatherOccupation: '',
+        motherName: '',
+        motherOccupation: '',
+        language: '',
+        emergencyContact: '',
+        emergencyAddress: '',
+        elementary: '',
+        elementaryGraduate: '',
+        highschool: '',
+        highschoolGraduate: '',
+        college: '',
+        collegeGraduate: '',
+        degree: '',
+        specialSkills: '',
+        companyName1: '',
+        empPosition1: '',
+        positionFrom1: '',
+        positionTo1: '',
+        companyName2: '',
+        empPosition2: '',
+        positionFrom2: '',
+        positionTo2: ''
+      })
+      refreshData()
+    })
   }
 
   return (

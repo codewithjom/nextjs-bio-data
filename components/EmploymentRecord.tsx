@@ -26,7 +26,7 @@ export function EmploymentRecord({
 }: EmploymentRecordsProps) {
   return (
     <div>
-      <h1 className='text-xl font-bold mb-5'>Educational Background</h1>
+      <h1 className='text-xl font-bold mb-5'>Employment Record</h1>
       <div className='flex-1'>
         <label>Company Name</label>
         <input

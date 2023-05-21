@@ -11,7 +11,8 @@ datasource db {
 }
 
 model Biodata {
-  id                  String @id @default(uuid())
+  id                  String     @id @default(uuid())
+  createdAt           DateTime   @default(now())
   positionDesired     String
   date                String
   fullname            String
